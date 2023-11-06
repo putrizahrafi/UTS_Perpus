@@ -59,21 +59,21 @@ const Settings = ({ navigation }) => {
       text: "Edit Profile",
       action: navigateToEditProfile,
     },
-    { icon: "security", text: "Security", action: navigateToSecurity },
-    {
-      icon: "notifications-none",
-      text: "Notifications",
-      action: navigateToNotifications,
-    },
-    { icon: "lock-outline", text: "Privacy", action: navigateToPrivacy },
+    // { icon: "security", text: "Security", action: navigateToSecurity },
+    // {
+    //   icon: "notifications-none",
+    //   text: "Notifications",
+    //   action: navigateToNotifications,
+    // },
+    // { icon: "lock-outline", text: "Privacy", action: navigateToPrivacy },
   ];
 
   const supportItems = [
-    {
-      icon: "credit-card",
-      text: "My Subscription",
-      action: navigateToSubscription,
-    },
+    // {
+    //   icon: "credit-card",
+    //   text: "My Subscription",
+    //   action: navigateToSubscription,
+    // },
     { icon: "help-outline", text: "Help & Support", action: navigateToSupport },
     {
       icon: "info-outline",
@@ -82,22 +82,22 @@ const Settings = ({ navigation }) => {
     },
   ];
 
-  const cacheAndCellularItems = [
-    {
-      icon: "delete-outline",
-      text: "Free up space",
-      action: navigateToFreeSpace,
-    },
-    { icon: "save-alt", text: "Date Saver", action: navigateToDateSaver },
-  ];
+//   const cacheAndCellularItems = [
+//     {
+//       icon: "delete-outline",
+//       text: "Free up space",
+//       action: navigateToFreeSpace,
+//     },
+//     { icon: "save-alt", text: "Date Saver", action: navigateToDateSaver },
+//   ];
 
   const actionsItems = [
-    {
-      icon: "outlined-flag",
-      text: "Report a problem",
-      action: navigateToReportProblem,
-    },
-    { icon: "people-outline", text: "Add Account", action: addAccount },
+    // {
+    //   icon: "outlined-flag",
+    //   text: "Report a problem",
+    //   action: navigateToReportProblem,
+    // },
+    // { icon: "people-outline", text: "Add Account", action: addAccount },
     { icon: "logout", text: "Log out", action: logout },
   ];
 
@@ -195,7 +195,7 @@ const Settings = ({ navigation }) => {
           </View>
         </View>
 
-        {/* Cache & Cellular */}
+        {/* Cache & Cellular
         <View style={{ marginBottom: 12 }}>
           <Text style={{ ...FONTS.h4, marginVertical: 10 }}>
             Cache & Cellular{" "}
@@ -211,8 +211,8 @@ const Settings = ({ navigation }) => {
                 {renderSettingsItem(item)}
               </React.Fragment>
             ))}
-          </View>
-        </View>
+          </View> */}
+        {/* </View> */}
 
         {/* Actions Settings */}
 

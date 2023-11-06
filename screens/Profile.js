@@ -127,10 +127,10 @@ const Profile = () => {
         <Text
           style={{
             color: COLORS.black,
-            ...FONTS.body4,
+            ...FONTS.body5,
           }}
         >
-          Full Stack Developer
+          A girl who love nature and carried away by the wind
         </Text>
 
         <View

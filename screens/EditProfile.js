@@ -10,17 +10,17 @@ import {
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as ImagePicker from "expo-image-picker";
-import { COLORS, FONTS } from "../constants";
+import { COLORS, FONTS, images } from "../constants";
 import { MaterialIcons } from "@expo/vector-icons";
 import { imagesDataURL } from "../constants/data";
 import DatePicker, { getFormatedDate } from "react-native-modern-datepicker";
 
 const EditProfile = ({ navigation }) => {
   const [selectedImage, setSelectedImage] = useState(imagesDataURL[0]);
-  const [name, setName] = useState("Melissa Peters");
-  const [email, setEmail] = useState("metperters@gmail.com");
+  const [name, setName] = useState("Putri Zahrafi Anam");
+  const [email, setEmail] = useState("pzahrafi@gmail.com");
   const [password, setPassword] = useState("randompassword");
-  const [country, setCountry] = useState("Nigeria");
+  const [country, setCountry] = useState("Indonesia");
 
   const [openStartDatePicker, setOpenStartDatePicker] = useState(false);
   const today = new Date();
@@ -28,8 +28,8 @@ const EditProfile = ({ navigation }) => {
     today.setDate(today.getDate() + 1),
     "YYYY/MM/DD"
   );
-  const [selectedStartDate, setSelectedStartDate] = useState("01/01/1990");
-  const [startedDate, setStartedDate] = useState("12/12/2023");
+  const [selectedStartDate, setSelectedStartDate] = useState("05/08/2003");
+  const [startedDate, setStartedDate] = useState("07/11/2023");
 
   const handleChangeStartDate = (propDate) => {
     setStartedDate(propDate);
@@ -154,7 +154,7 @@ const EditProfile = ({ navigation }) => {
         >
           <TouchableOpacity onPress={handleImageSelection}>
             <Image
-              source={{ uri: selectedImage }}
+              source={images.profile}
               style={{
                 height: 170,
                 width: 170,
