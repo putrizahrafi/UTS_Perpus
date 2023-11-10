@@ -1,8 +1,11 @@
 import { View, Text, TouchableOpacity, ScrollView } from "react-native";
+import { Box, HStack, Heading, Text as NText } from "native-base";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { COLORS, FONTS } from "../constants";
 import { MaterialIcons } from "@expo/vector-icons";
+import {Gap} from '../components';
 
 const Settings = ({ navigation }) => {
   const navigateToEditProfile = () => {
@@ -82,14 +85,14 @@ const Settings = ({ navigation }) => {
     },
   ];
 
-//   const cacheAndCellularItems = [
-//     {
-//       icon: "delete-outline",
-//       text: "Free up space",
-//       action: navigateToFreeSpace,
-//     },
-//     { icon: "save-alt", text: "Date Saver", action: navigateToDateSaver },
-//   ];
+  //   const cacheAndCellularItems = [
+  //     {
+  //       icon: "delete-outline",
+  //       text: "Free up space",
+  //       action: navigateToFreeSpace,
+  //     },
+  //     { icon: "save-alt", text: "Date Saver", action: navigateToDateSaver },
+  //   ];
 
   const actionsItems = [
     // {
@@ -231,6 +234,27 @@ const Settings = ({ navigation }) => {
             ))}
           </View>
         </View>
+
+        <Box mt={5}>
+          <Heading size={"md"}>Utils</Heading>
+          <TouchableOpacity onPress={() => navigation.navigate('ContactUs')}>
+            <Box backgroundColor={"#F4F4F7"} p={2}>
+              <HStack>
+                <Ionicons name="call-outline" size={25} />
+                <NText fontSize={16} fontWeight={"medium"} ml={8}>Contact Us</NText>
+              </HStack>
+            </Box>
+          </TouchableOpacity>
+          <Gap height={8} />
+          <TouchableOpacity onPress={() => navigation.navigate('Guide')}>
+            <Box backgroundColor={"#F4F4F7"} p={2}>
+              <HStack>
+                <Ionicons name="book-outline" size={25} />
+                <NText fontSize={16} fontWeight={"medium"} ml={8}>Guide</NText>
+              </HStack>
+            </Box>
+          </TouchableOpacity>
+        </Box>
       </ScrollView>
     </SafeAreaView>
   );
